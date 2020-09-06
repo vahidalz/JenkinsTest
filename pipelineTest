@@ -5,6 +5,13 @@ pipeline {
     
     
   stages {
+  stage('test') {
+            steps { 
+                script {
+                   echo 'test'
+                }
+            }
+        }
         stage('Conditional') {
             steps { 
                 script {
@@ -12,13 +19,7 @@ pipeline {
                 }
             }
         }
-		 stage('test') {
-            steps { 
-                script {
-                   echo 'test'
-                }
-            }
-        }
+		 
          
   }
   

@@ -1,5 +1,5 @@
  
- stg(){
+ def stg(){
  stage('test11') {
 				steps { 
 					script {

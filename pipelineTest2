@@ -1,0 +1,39 @@
+ 
+ stg(){
+ stage('test11') {
+				steps { 
+					script {
+					echo('test')
+					   
+					}
+				}
+			}
+ }
+
+	
+pipeline {
+    agent {label 'LinuxAgent'} 
+    stages{
+		 stage('test11') {
+				steps { 
+					script {
+					 stg()
+					}
+				}
+			}
+		
+	  
+	  stage('test') {
+				steps { 
+					script {
+					   echo 'test'
+					}
+				}
+			}
+			
+			 
+			 
+	  
+  
+	}
+}

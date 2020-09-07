@@ -1,9 +1,8 @@
- #!/usr/bin/env groovy
-import hudson.model.*
- def pipelineA = load "test.groovy"
+ 
 
 	
 pipeline {
+def pipelineA = load "test.groovy"
     agent {label 'LinuxAgent'} 
     stages{
 		 stage('test11') {

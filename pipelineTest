@@ -1,13 +1,14 @@
  
+ 
 
 	
 pipeline {
-def pipelineA = load "test.groovy"
     agent {label 'LinuxAgent'} 
     stages{
 		 stage('test11') {
 				steps { 
 					script {
+					def pipelineA = load "test.groovy"
 					   pipelineA.stg()
 					   
 					}
